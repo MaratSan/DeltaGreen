@@ -22,7 +22,11 @@ export class TodoListPagePOM extends POM {
   }
 
   async navigate(): Promise<void> {
-    await this.page.goto(PropertiesManager.getProperty(DELTAGREEN_URL));
+    await this.page.goto(PropertiesManager.getProperty("DELTAGREEN_URL"));
+  }
+
+  async goBack(): Promise<void> {
+    await this.page.goBack();
   }
 
   async validateAllComponents(): Promise<void> {
