@@ -6,7 +6,7 @@ import { ButtonInterface } from "../../components/interfaces/buttonInterface";
 import { PropertiesManager } from "../../properties/propertiesManager";
 import { LabelInterface } from "../../components/interfaces/labelInterface";
 
-export class SuperfixLandingPagePOM extends POM {
+export class LoginPagePOM extends POM {
   private signUp_label: LabelInterface;
   private loginUserName_input: InputInterface;
   private loginPassword_input: InputInterface;
@@ -40,7 +40,6 @@ export class SuperfixLandingPagePOM extends POM {
 
   async navigate(): Promise<void> {
     await this.page.goto(PropertiesManager.getProperty("DELTAGREEN_URL"));
-    await this.validateAllComponents();
   }
   async goBack(): Promise<void> {
     await this.page.goBack();
