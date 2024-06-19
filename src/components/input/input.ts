@@ -1,14 +1,11 @@
 import { expect } from '@playwright/test'
-import { InputInterface } from '../interfaces/inputInterface'
-import { CommonComponent } from './commonComponents'
+import { InputInterface } from './inputInterface'
+import { CommonComponent } from '../commonComponents/commonComponents'
 
 export class Input extends CommonComponent<Input> implements InputInterface {
   private inputText: string = ''
   private placeholder: string = ''
 
-  private constructor() {
-    super()
-  }
 
   public static newInstance() {
     return new Input()

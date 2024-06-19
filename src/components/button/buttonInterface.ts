@@ -1,4 +1,4 @@
-import { DefaultComponentInterface } from './defaultComponentInterface'
+import { DefaultComponentInterface } from '../commonComponents/defaultComponentInterface'
 
 /**
  * Represents general behavior of button.

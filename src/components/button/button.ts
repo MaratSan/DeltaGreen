@@ -1,12 +1,8 @@
-import { ButtonInterface } from '../interfaces/buttonInterface'
-import { CommonComponent } from './commonComponents'
+import { ButtonInterface } from './buttonInterface'
+import { CommonComponent } from '../commonComponents/commonComponents'
 
 export class Button extends CommonComponent<Button> implements ButtonInterface {
   private buttonText: string = ''
-
-  private constructor() {
-    super()
-  }
 
   public static newInstance() {
     return new Button()

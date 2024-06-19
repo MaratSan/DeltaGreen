@@ -4,6 +4,6 @@ export interface User {
   }
 
   export const standardUserCredentials: User = {
-    username: 'deltagreen1',
-    password: '123456789',
+    username: process.env.USERNAME ?? '',
+    password: process.env.PASSWORD ?? '',
   };

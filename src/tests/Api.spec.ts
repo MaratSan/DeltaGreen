@@ -2,6 +2,7 @@ import { test, expect, request } from '@playwright/test';
 import { standardUserCredentials } from '../test-data/login';
 
 const baseURL = 'https://todos.dev.deltagreen.cz/api';
+
 const authHeader = {
   'Content-Type': 'application/json',
   'Authorization': 'Basic ' + Buffer.from(standardUserCredentials.username + ":" + standardUserCredentials.password).toString('base64') 

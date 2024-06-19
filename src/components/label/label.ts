@@ -1,13 +1,9 @@
 import { expect } from '@playwright/test'
-import { CommonComponent } from './commonComponents'
-import { LabelInterface } from '../interfaces/labelInterface'
+import { CommonComponent } from '../commonComponents/commonComponents'
+import { LabelInterface } from './labelInterface'
 
 export class Label extends CommonComponent<Label> implements LabelInterface {
   private labelText: string = ''
-
-  private constructor() {
-    super()
-  }
 
   public static newInstance() {
     return new Label()

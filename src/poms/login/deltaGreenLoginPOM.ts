@@ -1,9 +1,9 @@
 import { Page } from "@playwright/test";
-import { InputInterface } from "../../components/interfaces/inputInterface";
+import { InputInterface } from "../../components/input/inputInterface";
 import { POM } from "../pom";
 import { ComponentFactory } from "../../components/factory/componentsFactory";
-import { ButtonInterface } from "../../components/interfaces/buttonInterface";
-import { LabelInterface } from "../../components/interfaces/labelInterface";
+import { ButtonInterface } from "../../components/button/buttonInterface";
+import { LabelInterface } from "../../components/label/labelInterface";
 import { PropertiesManager } from "../../properties/propertiesManager";
 
 export class LoginPagePOM extends POM {

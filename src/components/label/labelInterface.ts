@@ -1,4 +1,4 @@
-import { DefaultComponentInterface } from './defaultComponentInterface'
+import { DefaultComponentInterface } from '../commonComponents/defaultComponentInterface'
 
 /**
  * Represents common behavior of label, of common text fields(headings,

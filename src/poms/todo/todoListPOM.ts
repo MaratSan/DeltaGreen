@@ -1,8 +1,8 @@
 import { Page } from "@playwright/test";
 import { POM } from "../pom";
 import { ComponentFactory } from "../../components/factory/componentsFactory";
-import { LabelInterface } from "../../components/interfaces/labelInterface";
-import { ButtonInterface } from "../../components/interfaces/buttonInterface";
+import { LabelInterface } from "../../components/label/labelInterface";
+import { ButtonInterface } from "../../components/button/buttonInterface";
 import { PropertiesManager } from "../../properties/propertiesManager";
 
 export class TodoListPagePOM extends POM {

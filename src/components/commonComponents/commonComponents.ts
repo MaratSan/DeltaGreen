@@ -8,8 +8,6 @@ export abstract class CommonComponent<C extends CommonComponent<C>> {
   protected enabled?: boolean
   protected readonly?: boolean
 
-  protected constructor() {}
-
   /**
    * Ensures callback from parent class to subclass which instantiated current object.
    * @returns Returns sub-class that instantiated object
