@@ -20,9 +20,10 @@ test.describe('Login and To-Do List Tests', () => {
   });
 
   test('To-Do List Page - Validate Components', async ({ page }) => {
+    const loginPage = new LoginPagePOM(page);
+    await loginPage.navigate();
+    await loginPage.login(standardUserCredentials.username, standardUserCredentials.password);
     const todoListPage = new TodoListPagePOM(page);
-    await todoListPage.navigate();
     await todoListPage.validateAllComponents();
   });
-
 });

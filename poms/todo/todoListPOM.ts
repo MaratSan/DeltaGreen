@@ -8,21 +8,25 @@ import { PropertiesManager } from "../../properties/propertiesManager";
 export class TodoListPagePOM extends POM {
   private todoList_label: LabelInterface;
   private newTask_button: ButtonInterface;
+  private logout_button: ButtonInterface;
 
   constructor(page: Page) {
     super(page);
 
     this.todoList_label = ComponentFactory.createLabel().setLocator(
-      this.page.getByRole('heading', { name: 'Your Todo list' })
+      this.page.locator('xpath=//*[text()="Your Todo list"]')
     );
 
     this.newTask_button = ComponentFactory.createButton()
-      .setLocator(this.page.getByRole("button", { name: "New Task" }))
-      .setVisible(true);
-  }
+    .setLocator(this.page.locator('xpath=//*[text()="New Task"]'))
+    .setVisible(true);
+
+    this.logout_button = ComponentFactory.createButton()
+    .setLocator(this.page.locator('xpath=//*[text()="Logout"]'))
+}
 
   async navigate(): Promise<void> {
-    await this.page.goto(PropertiesManager.getProperty("DELTAGREEN_URL"));
+    await this.page.goto(PropertiesManager.getProperty('DELTAGREEN_URL'));
   }
 
   async goBack(): Promise<void> {
@@ -32,5 +36,6 @@ export class TodoListPagePOM extends POM {
   async validateAllComponents(): Promise<void> {
     await this.todoList_label.validateSelf();
     await this.newTask_button.validateSelf();
+    await this.logout_button.validateSelf();
   }
 }

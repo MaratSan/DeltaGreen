@@ -78,7 +78,7 @@ export abstract class CommonComponent<C extends CommonComponent<C>> {
   }
 
   validateText(): void {
-    throw Error('Text validation is not yet defined for elements in Woltair QA framework.')
+    throw Error('Text validation is not yet defined for elements in QA framework.')
   }
 
   async validateSelf(): Promise<void> {
