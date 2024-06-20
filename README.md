@@ -37,10 +37,13 @@ This project contains automated tests for the Todo List application, written usi
 
 ## Running Tests
 1. To run the tests, use the following command:
+    ```bash
     npm test
 
 2. To open UI mode, run the following command in your terminal:
+    ```bash
     npm run debug  
 
 3. List reporter is default (except on CI where the dot reporter is default). It prints a line for each test being run.
+    ```bash
     npm run report
