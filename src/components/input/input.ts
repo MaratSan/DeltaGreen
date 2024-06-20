@@ -1,4 +1,4 @@
-import { expect } from '@playwright/test'
+import { Locator, expect } from '@playwright/test'
 import { InputInterface } from './inputInterface'
 import { CommonComponent } from '../commonComponents/commonComponents'
 

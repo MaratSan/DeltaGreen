@@ -14,6 +14,7 @@ export interface InputInterface extends DefaultComponentInterface<InputInterface
    * Sets placeholder value to be shown inside of input.
    * @param placeholder text of placeholder
    */
+
   setPlaceholder(placeholder: string): InputInterface
   /**
    * Performs action of typing into the input in browser.

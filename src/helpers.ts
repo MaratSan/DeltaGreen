@@ -13,6 +13,6 @@ export async function waitPage(testPage: Page, timeoutDelay = 0) {
   }
 }
 
-export async function phoneNumber() {
-  return Math.floor(Math.random() * 900000 + 100000)
+export function getRandomNumber() {
+  return Math.floor(Math.random() * 10000);
 }
